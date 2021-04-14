@@ -39,5 +39,5 @@ git commit -s
 In the event that you push a commit without signing off, you can amend the commit and force push to update your branch and pull request.
 ```bash
 git commit -s --amend --no-edit
-git push --force 
+git push --force
 ```
