@@ -1,21 +1,24 @@
 name: Merge upstream master branch
 on:
   schedule:
-    - cron:  '* * * * *'
+  - cron: "0 */6 * * *"
+  push:
+    branches:
+    - master
 jobs:
   merge-upstream:
     runs-on: ubuntu-latest
     steps:
-      - name: Merge Upstream
-        run: |
-          git config --global user.name 'Shubham Tatvamasi'
-          git config --global user.email 'shubhamtatvamasi@gmail.com'
+    - name: Merge Upstream
+      run: |
+        git config --global user.name 'Shubham Tatvamasi'
+        git config --global user.email 'shubhamtatvamasi@gmail.com'
 
-          git clone git@github.com:ShubhamTatvamasi/magma.git
+        git clone git@github.com:ShubhamTatvamasi/magma.git
 
-          cd magma
+        cd magma
 
-          git remote add upstream https://github.com/magma/magma.git
-          git pull --rebase upstream master
+        git remote add upstream https://github.com/magma/magma.git
+        git pull --rebase upstream master
 
-          git push origin master
+        git push origin master
