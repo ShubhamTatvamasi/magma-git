@@ -2,7 +2,8 @@
 
 Setup Development repo for new branch:
 ```bash
-curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh | bash -s new-branch
+curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh | \
+  bash -s ShubhamTatvamasi new-branch
 ```
 
 Clone Magma repo:

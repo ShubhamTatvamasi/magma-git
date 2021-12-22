@@ -2,9 +2,9 @@
 
 set -ex
 
-GITHUB_USERNAME=ShubhamTatvamasi
+GITHUB_USERNAME=${1}
 GITHUB_REPO=magma
-NEW_BRANCH_NAME=${1}
+NEW_BRANCH_NAME=${2}
 
 # Clone Magma repo:
 git clone git@github.com:${GITHUB_USERNAME}/${GITHUB_REPO}.git ${NEW_BRANCH_NAME}
