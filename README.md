@@ -1,5 +1,10 @@
 # Magma git setup
 
+Setup Development repo for new branch:
+```bash
+curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh | bash -s new-branch
+```
+
 Clone Magma repo:
 ```bash
 git clone git@github.com:ShubhamTatvamasi/magma.git
