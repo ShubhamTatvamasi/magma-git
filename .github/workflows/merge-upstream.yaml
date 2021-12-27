@@ -23,4 +23,4 @@ jobs:
         git remote add upstream https://github.com/magma/magma.git
         git pull --rebase upstream master
 
-        git push origin master
+        git push origin master --force
