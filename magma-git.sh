@@ -21,4 +21,5 @@ git pull --rebase upstream master
 # checkout to the new branch:
 git checkout -b ${NEW_BRANCH_NAME}
 
+# move inside magma repo
 cd ${NEW_BRANCH_NAME}
