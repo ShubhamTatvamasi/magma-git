@@ -6,6 +6,12 @@ curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh |
   bash -s ShubhamTatvamasi new-branch
 ```
 
+
+https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml
+
+- In short, the format is `type(scope): Title`, e.g. `fix(agw): Fix pyroute2 dependency`
+
+
 Clone Magma repo:
 ```bash
 git clone git@github.com:ShubhamTatvamasi/magma.git
