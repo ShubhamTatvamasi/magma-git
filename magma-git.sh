@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 
 GITHUB_USERNAME=${1}
 GITHUB_REPO=magma
