@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
 GITHUB_USERNAME=${1}
 GITHUB_REPO=magma
@@ -20,3 +20,5 @@ git pull --rebase upstream master
 
 # checkout to the new branch:
 git checkout -b ${NEW_BRANCH_NAME}
+
+echo "cd ${NEW_BRANCH_NAME}"
