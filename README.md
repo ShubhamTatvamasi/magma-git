@@ -6,6 +6,15 @@ curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh |
   bash -s ShubhamTatvamasi new-branch
 ```
 
+Add your personal remote repo as `magma`:
+```bash
+git remote add magma git@github.com:ShubhamTatvamasi/magma.git
+git push magma operator-artifactory-push-fix
+
+# For removing
+git remote remove magma
+```
+
 https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml#L62
 
 - In short, the format is `type(scope): Title`, e.g. `fix(agw): Fix pyroute2 dependency`
