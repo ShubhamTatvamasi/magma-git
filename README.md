@@ -25,6 +25,11 @@ git clone git@github.com:ShubhamTatvamasi/magma.git
 cd magma
 ```
 
+Change remote url:
+```bash
+git remote set-url origin git@github.com:ShubhamTatvamasi/magma.git
+```
+
 Set the remote upstream as follows:
 ```bash
 git remote add upstream https://github.com/magma/magma.git
