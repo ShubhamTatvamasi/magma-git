@@ -6,10 +6,10 @@ DEFAULT_GITHUB_USERNAME=ShubhamTatvamasi
 DEFAULT_BRANCH_NAME=master
 MAGMA_REPO=magma
 
-read -p "What's your GitHub Username? (default: ${DEFAULT_GITHUB_USERNAME}) " GITHUB_USERNAME
+read -p "What's your GitHub Username? (default: ${DEFAULT_GITHUB_USERNAME}): " GITHUB_USERNAME
 GITHUB_USERNAME="${GITHUB_USERNAME:-${DEFAULT_GITHUB_USERNAME}}"
 
-read -p "What's your GitHub Username? (default: ${DEFAULT_BRANCH_NAME}) " BRANCH_NAME
+read -p "What's your GitHub Username? (default: ${DEFAULT_BRANCH_NAME}): " BRANCH_NAME
 BRANCH_NAME="${BRANCH_NAME:-${DEFAULT_BRANCH_NAME}}"
 
 # Clone Magma repo:
