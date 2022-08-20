@@ -2,9 +2,10 @@
 
 Setup Development repo for new branch:
 ```bash
-curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh | \
-  bash -s ShubhamTatvamasi new-branch
+curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh | bash
 ```
+
+---
 
 Add your personal remote repo as `magma`:
 ```bash

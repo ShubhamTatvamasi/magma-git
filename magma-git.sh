@@ -1,24 +1,32 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
-GITHUB_USERNAME=${1}
-GITHUB_REPO=magma
-NEW_BRANCH_NAME=${2}
+DEFAULT_GITHUB_USERNAME=ShubhamTatvamasi
+DEFAULT_BRANCH_NAME=master
+MAGMA_REPO=magma
+
+read -p "What's your GitHub Username? (default: ${DEFAULT_GITHUB_USERNAME}) " GITHUB_USERNAME
+GITHUB_USERNAME="${GITHUB_USERNAME:-${DEFAULT_GITHUB_USERNAME}}"
+echo $GITHUB_USERNAME
+
+read -p "What's your GitHub Username? (default: ${DEFAULT_BRANCH_NAME}) " BRANCH_NAME
+BRANCH_NAME="${BRANCH_NAME:-${DEFAULT_BRANCH_NAME}}"
+echo $BRANCH_NAME
 
 # Clone Magma repo:
-git clone git@github.com:${GITHUB_USERNAME}/${GITHUB_REPO}.git ${NEW_BRANCH_NAME}
+git clone git@github.com:${GITHUB_USERNAME}/${MAGMA_REPO}.git ${BRANCH_NAME}
 
 # move to the new branch:
-cd ${NEW_BRANCH_NAME}
+cd ${BRANCH_NAME}
 
 # add upstream repo:
-git remote add upstream https://github.com/${GITHUB_REPO}/${GITHUB_REPO}.git
+git remote add upstream https://github.com/${MAGMA_REPO}/${MAGMA_REPO}.git
 
 # get latest code from upstream:
 git pull --rebase upstream master
 
 # checkout to the new branch:
-git checkout -b ${NEW_BRANCH_NAME}
+git checkout -b ${BRANCH_NAME}
 
-echo "cd ${NEW_BRANCH_NAME}"
+echo "cd ${BRANCH_NAME}"
