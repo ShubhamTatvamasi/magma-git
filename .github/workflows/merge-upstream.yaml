@@ -2,9 +2,7 @@ name: Merge upstream master branch
 on:
   schedule:
   - cron: "0 */6 * * *"
-  push:
-    branches:
-    - master
+  workflow_dispatch:
 jobs:
   merge-upstream:
     runs-on: ubuntu-latest

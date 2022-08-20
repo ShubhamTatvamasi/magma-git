@@ -2,7 +2,7 @@
 
 Setup Development repo for new branch:
 ```bash
-curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh | bash
+bash -c "$(curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh)"
 ```
 
 ---
