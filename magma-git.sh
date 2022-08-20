@@ -9,7 +9,7 @@ MAGMA_REPO=magma
 read -p "What's your GitHub Username? (default: ${DEFAULT_GITHUB_USERNAME}): " GITHUB_USERNAME
 GITHUB_USERNAME="${GITHUB_USERNAME:-${DEFAULT_GITHUB_USERNAME}}"
 
-read -p "What's your GitHub Username? (default: ${DEFAULT_BRANCH_NAME}): " BRANCH_NAME
+read -p "New Branch Name? (default: ${DEFAULT_BRANCH_NAME}): " BRANCH_NAME
 BRANCH_NAME="${BRANCH_NAME:-${DEFAULT_BRANCH_NAME}}"
 
 # Clone Magma repo:
@@ -25,6 +25,8 @@ git remote add upstream https://github.com/${MAGMA_REPO}/${MAGMA_REPO}.git
 git pull --rebase upstream master
 
 # checkout to the new branch:
-git checkout -b ${BRANCH_NAME}
+if [ ${BRANCH_NAME} != ${DEFAULT_BRANCH_NAME} ]; then
+  git checkout -b ${BRANCH_NAME}
+fi
 
 echo "cd ${BRANCH_NAME}"
