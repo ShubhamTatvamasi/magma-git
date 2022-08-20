@@ -8,11 +8,9 @@ MAGMA_REPO=magma
 
 read -p "What's your GitHub Username? (default: ${DEFAULT_GITHUB_USERNAME}) " GITHUB_USERNAME
 GITHUB_USERNAME="${GITHUB_USERNAME:-${DEFAULT_GITHUB_USERNAME}}"
-echo $GITHUB_USERNAME
 
 read -p "What's your GitHub Username? (default: ${DEFAULT_BRANCH_NAME}) " BRANCH_NAME
 BRANCH_NAME="${BRANCH_NAME:-${DEFAULT_BRANCH_NAME}}"
-echo $BRANCH_NAME
 
 # Clone Magma repo:
 git clone git@github.com:${GITHUB_USERNAME}/${MAGMA_REPO}.git ${BRANCH_NAME}
