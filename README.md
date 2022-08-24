@@ -16,7 +16,7 @@ git push magma operator-artifactory-push-fix
 git remote remove magma
 ```
 
-https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml#L64
+https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml#L74
 
 - In short, the format is `type(scope): Title`, e.g. `fix(agw): Fix pyroute2 dependency`
 
