@@ -5,6 +5,27 @@ Setup Development repo for new branch:
 bash -c "$(curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh)"
 ```
 
+https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml#L74
+
+---
+
+cherry-pick a commit:
+```bash
+git show d1229589ed38c8ec385d2cbb2759168852af8d86
+
+git fetch upstream
+git checkout v1.8
+git pull upstream v1.8
+
+git checkout -b cherry-pick-updated-docker-install
+
+git cherry-pick d1229589ed38c8ec385d2cbb2759168852af8d86
+
+# if you see conflicts
+git add .
+git cherry-pick --continue
+```
+
 ---
 
 Add your personal remote repo as `magma`:
@@ -15,8 +36,6 @@ git push magma operator-artifactory-push-fix
 # For removing
 git remote remove magma
 ```
-
-https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml#L74
 
 - In short, the format is `type(scope): Title`, e.g. `fix(agw): Fix pyroute2 dependency`
 
