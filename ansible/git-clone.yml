@@ -1,0 +1,16 @@
+- name: Git Clone
+  hosts: localhost
+  connection: local
+  tasks:
+
+  - name: Clone Git
+    register: git_status
+    git:
+      repo: https://github.com/magma/magma.git
+      dest: magma
+      clone: no
+      update: no
+
+  - name: Git Status
+    debug:
+      var: git_status
