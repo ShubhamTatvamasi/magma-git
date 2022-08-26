@@ -5,7 +5,7 @@ Setup Development repo for new branch:
 bash -c "$(curl -sL https://github.com/ShubhamTatvamasi/magma-git/raw/master/magma-git.sh)"
 ```
 
-https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml#L74
+https://github.com/magma/magma/blob/master/.github/workflows/semantic-pr.yml#L59
 
 ---
 
